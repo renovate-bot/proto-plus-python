@@ -1,5 +1,55 @@
 # Changelog
 
+## [1.10.0](https://www.github.com/renovate-bot/proto-plus-python/compare/0.4.0...v1.10.0) (2021-02-24)
+
+
+### Features
+
+* add 3.9 support and drop 3.5 ([#167](https://www.github.com/renovate-bot/proto-plus-python/issues/167)) ([6d17195](https://www.github.com/renovate-bot/proto-plus-python/commit/6d171956e14b398aece931b9dde1013be9644b74))
+* add convenience methods to convert to/from json ([#39](https://www.github.com/renovate-bot/proto-plus-python/issues/39)) ([2868946](https://www.github.com/renovate-bot/proto-plus-python/commit/286894609843f568c9ff367ab79542783642b801))
+* add DatetimeWithNanoseconds class to maintain Timestamp pb precision. ([#40](https://www.github.com/renovate-bot/proto-plus-python/issues/40)) ([a17ccd5](https://www.github.com/renovate-bot/proto-plus-python/commit/a17ccd52c7fa3609ce79fde84b931c0693f53171)), closes [#38](https://www.github.com/renovate-bot/proto-plus-python/issues/38)
+* add default values parameter to to_json ([#164](https://www.github.com/renovate-bot/proto-plus-python/issues/164)) ([691f1b2](https://www.github.com/renovate-bot/proto-plus-python/commit/691f1b24454502c4ac49a88a09d1c9fbc287b2bd))
+* add support for proto3 optional fields ([#35](https://www.github.com/renovate-bot/proto-plus-python/issues/35)) ([0eb5762](https://www.github.com/renovate-bot/proto-plus-python/commit/0eb5762681e315635db1dffd583d91a4f32cba43))
+* allow enum strings in json serialization and deserialization ([#107](https://www.github.com/renovate-bot/proto-plus-python/issues/107)) ([a082f85](https://www.github.com/renovate-bot/proto-plus-python/commit/a082f85ffcb72e2c53c0e33e40e6df2927a41259))
+* json serialization and deserialization support stringy enums ([#112](https://www.github.com/renovate-bot/proto-plus-python/issues/112)) ([8d2e3a3](https://www.github.com/renovate-bot/proto-plus-python/commit/8d2e3a3439650dab9ca7c6ff49ed067838a02a45)), closes [#107](https://www.github.com/renovate-bot/proto-plus-python/issues/107)
+* more performance optimizations ([#92](https://www.github.com/renovate-bot/proto-plus-python/issues/92)) ([19b1519](https://www.github.com/renovate-bot/proto-plus-python/commit/19b151960de7c83ac82e670b06cb47d6e885f627))
+* nullable ListValue and Struct fields ([#129](https://www.github.com/renovate-bot/proto-plus-python/issues/129)) ([25aa888](https://www.github.com/renovate-bot/proto-plus-python/commit/25aa888fbddc54644b51f8062120ade41777d5ec)), closes [#106](https://www.github.com/renovate-bot/proto-plus-python/issues/106)
+* optimize insert for class RepeatedComposite. ([#95](https://www.github.com/renovate-bot/proto-plus-python/issues/95)) ([86790e3](https://www.github.com/renovate-bot/proto-plus-python/commit/86790e3f7d891e13835699a4e1f50aec6140fa6e))
+* prevent unnecessary copies when deserializing proto ([#63](https://www.github.com/renovate-bot/proto-plus-python/issues/63)) ([5e1c061](https://www.github.com/renovate-bot/proto-plus-python/commit/5e1c0619b5f4c5d2a6a75ae6d45a53fef2e58823))
+* provide a to_dict method ([#154](https://www.github.com/renovate-bot/proto-plus-python/issues/154)) ([ccf903e](https://www.github.com/renovate-bot/proto-plus-python/commit/ccf903e3cddfcb1ff539e853594b4342914b7d61)), closes [#153](https://www.github.com/renovate-bot/proto-plus-python/issues/153) [#151](https://www.github.com/renovate-bot/proto-plus-python/issues/151)
+* Pypi publish ghub actions ([#189](https://www.github.com/renovate-bot/proto-plus-python/issues/189)) ([4c967b0](https://www.github.com/renovate-bot/proto-plus-python/commit/4c967b0bb2ead29156bcc53c1f3b227b3afb2e8b))
+* support fixed filename salt to allow proto-plus use with schema registry tools ([#61](https://www.github.com/renovate-bot/proto-plus-python/issues/61)) ([ea86eb9](https://www.github.com/renovate-bot/proto-plus-python/commit/ea86eb9ac694ed1f0e711698429449f41ecfedfc))
+
+
+### Bug Fixes
+
+* accessing an unset struct_pb2.Value field does not raise ([#140](https://www.github.com/renovate-bot/proto-plus-python/issues/140)) ([d045cbf](https://www.github.com/renovate-bot/proto-plus-python/commit/d045cbf058cbb8f4ca98dd06741270fcaee865be))
+* add LICENSE and tests to package ([#146](https://www.github.com/renovate-bot/proto-plus-python/issues/146)) ([815c943](https://www.github.com/renovate-bot/proto-plus-python/commit/815c9439a1dadb2d4111784eb18ba673ce6e6cc2))
+* correctly handle passed in vanilla datetime.datetime ([#57](https://www.github.com/renovate-bot/proto-plus-python/issues/57)) ([a770816](https://www.github.com/renovate-bot/proto-plus-python/commit/a770816197cbce60ee023bd5b6ee6bd2d970ded8)), closes [googleapis/gapic-generator-python#544](https://www.github.com/googleapis/gapic-generator-python/issues/544)
+* getattr on an invalid field raises AttributeError ([#73](https://www.github.com/renovate-bot/proto-plus-python/issues/73)) ([74ea8f0](https://www.github.com/renovate-bot/proto-plus-python/commit/74ea8f0cd9083939e53d1de2450b649500281b9a)), closes [#31](https://www.github.com/renovate-bot/proto-plus-python/issues/31)
+* loosen tag match for publish_package ([#123](https://www.github.com/renovate-bot/proto-plus-python/issues/123)) ([67441c9](https://www.github.com/renovate-bot/proto-plus-python/commit/67441c931b5f00b2e1084ce2539784ae9d9c31e6))
+* Modify setup.py to indicate this is google maintained ([#45](https://www.github.com/renovate-bot/proto-plus-python/issues/45)) ([96b3b00](https://www.github.com/renovate-bot/proto-plus-python/commit/96b3b00dd6712fe44e71dedf8080b20544e95416))
+* numerous small performance tweaks ([#85](https://www.github.com/renovate-bot/proto-plus-python/issues/85)) ([7b5faf2](https://www.github.com/renovate-bot/proto-plus-python/commit/7b5faf2e2c20c8022c83d6a99656505aa669200b))
+* proper __setitem__ and insert for RepeatedComposite ([#178](https://www.github.com/renovate-bot/proto-plus-python/issues/178)) ([1157a76](https://www.github.com/renovate-bot/proto-plus-python/commit/1157a76bb608d72389f46dc4d8e9aa00cc14ccc6)), closes [#177](https://www.github.com/renovate-bot/proto-plus-python/issues/177)
+* proper native marshal for repeated enumeration fields ([#180](https://www.github.com/renovate-bot/proto-plus-python/issues/180)) ([30265d6](https://www.github.com/renovate-bot/proto-plus-python/commit/30265d654d7f3589cbd0994d2ac564db1fd44265)), closes [#179](https://www.github.com/renovate-bot/proto-plus-python/issues/179)
+* revert "feat: allow enum strings in json serialization and deserialization" ([#110](https://www.github.com/renovate-bot/proto-plus-python/issues/110)) ([bd3d50e](https://www.github.com/renovate-bot/proto-plus-python/commit/bd3d50e6b4d4574a21592f51adf7b248ededd545)), closes [#107](https://www.github.com/renovate-bot/proto-plus-python/issues/107)
+* revert algorithm for RepeatedComposite insertion. ([#101](https://www.github.com/renovate-bot/proto-plus-python/issues/101)) ([ae946aa](https://www.github.com/renovate-bot/proto-plus-python/commit/ae946aa2a3b394fa31590224fcf50593bde0ccaa))
+* third party enums don't break first class enums ([#118](https://www.github.com/renovate-bot/proto-plus-python/issues/118)) ([50b87af](https://www.github.com/renovate-bot/proto-plus-python/commit/50b87af481bb1f19d10d64e88dc9ee39c2d5b6f8)), closes [#103](https://www.github.com/renovate-bot/proto-plus-python/issues/103)
+* tweak publish ci task ([#65](https://www.github.com/renovate-bot/proto-plus-python/issues/65)) ([983189c](https://www.github.com/renovate-bot/proto-plus-python/commit/983189c5effa25fb9365eb63caddb425d3cfb2b5))
+* tweak pypi circleci task ([#54](https://www.github.com/renovate-bot/proto-plus-python/issues/54)) ([89c49d7](https://www.github.com/renovate-bot/proto-plus-python/commit/89c49d700d4b6e9a434fbfced8ca39d430dd22f9))
+* tweak to_python ([#88](https://www.github.com/renovate-bot/proto-plus-python/issues/88)) ([5459ede](https://www.github.com/renovate-bot/proto-plus-python/commit/5459ede75597b06df5a211b0e317fb2c1f4b034e))
+* update docstring to match type hint ([#172](https://www.github.com/renovate-bot/proto-plus-python/issues/172)) ([14dad5b](https://www.github.com/renovate-bot/proto-plus-python/commit/14dad5bf6c5967a720e9d3095d621dbfe208b614))
+* update encrypted pypi passwd ([#58](https://www.github.com/renovate-bot/proto-plus-python/issues/58)) ([d985233](https://www.github.com/renovate-bot/proto-plus-python/commit/d9852336d83717cb9ff24b6bec3ef1463239fea1))
+* yet more perf tweaks ([#90](https://www.github.com/renovate-bot/proto-plus-python/issues/90)) ([eb7891c](https://www.github.com/renovate-bot/proto-plus-python/commit/eb7891cf05124803352b2f4fd719937356bf9167))
+
+
+### Documentation
+
+* explain how to use repeated struct.Value ([#148](https://www.github.com/renovate-bot/proto-plus-python/issues/148)) ([9634ea8](https://www.github.com/renovate-bot/proto-plus-python/commit/9634ea8fa464c0d34f13469016f23cc2e986d973)), closes [#104](https://www.github.com/renovate-bot/proto-plus-python/issues/104)
+* link to pypi protobuf package ([#131](https://www.github.com/renovate-bot/proto-plus-python/issues/131)) ([2e05694](https://www.github.com/renovate-bot/proto-plus-python/commit/2e0569474b3330380ae04ce822aa063ddc8313dc))
+* linkify pypi badge ([#50](https://www.github.com/renovate-bot/proto-plus-python/issues/50)) ([8ff08e2](https://www.github.com/renovate-bot/proto-plus-python/commit/8ff08e21e75570aad71c5e62f4c78b43139b5df2))
+* update README ([#120](https://www.github.com/renovate-bot/proto-plus-python/issues/120)) ([2077390](https://www.github.com/renovate-bot/proto-plus-python/commit/2077390d614acb278ab94077f131a895d7184881))
+
 ### [1.13.1](https://www.github.com/googleapis/proto-plus-python/compare/v1.13.0...v1.13.1) (2021-02-09)
 
 
